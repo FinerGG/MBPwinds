@@ -11,5 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1"
-  }
+  },
+    "name": "my-package",
+    "scripts": {
+      "build": "babel src -d lib",
+      "test": "jest"
+    }
 }
