@@ -27,7 +27,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: absolute;
     right: 1410px; /* ระยะจากด้านขวาของรูปภาพ */
-    top: 5%;
+    top: 50%;
     transform: translateY(-50%);
     font-size: 16px; /* ขนาดของข้อความ */
     color: black; /* สีของข้อความ */
@@ -51,7 +51,7 @@ body {
 .hhm {
     text-decoration: none;
     color: black;
-    font-size: 18px;
+    font-size: 14px;
     padding: 10px 20px;
     margin: 5px;
     border-radius: 4px;
@@ -82,7 +82,7 @@ body {
 
 .header h1 {
     position: relative;
-    margin-top: 20px;        /* ปรับระยะห่างให้ข้อความอยู่ชิดกับภาพ */
+    margin-top: 30px;        /* ปรับระยะห่างให้ข้อความอยู่ชิดกับภาพ */
     font-size: 2.5em;
     color: #333;
     padding: 0.5em;
@@ -90,16 +90,19 @@ body {
 
 .content {
     display: flex;
-    justify-content: center; /* จัดให้อยู่กลาง */
-    gap: 2em;                /* ระยะห่างระหว่างกล่อง */
-    padding: 2em;
+    gap: -10em;             /* ระยะห่างระหว่างกล่อง */
+    padding: 0em;
+    flex-wrap: wrap; justify-content: space-around;
 }
 
 .section {
-    display: flex;
+    flex: 1 1 45%;
     flex-direction: column;
     align-items: center;
     width: 50%;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
 }
 
 .section a {
@@ -107,16 +110,51 @@ body {
     font-weight: bold;
     color: #333;
     text-decoration: none;
+    display: block;
+    text-decoration: underline;
 }
 
 .section img {
-    width: 50%;
+    max-width: 50%;
     height: auto;
     margin-bottom: 0.5em;   /* เพิ่มระยะห่างระหว่างรูปและข้อความ */
     border-radius: 15px;
     transition: transform 0.3s ease;
+    box-shadow: 0px 0px 15px;
 }
 
 .section img:hover {
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
+
+.social-text{
+    margin-top: 90px;
+}
+
+.social-icons {
+    background-color: #ffffff; /* สีพื้นหลังสีขาวสำหรับส่วนไอคอน */
+    padding: 5px 0;
+}
+
+.social-icons a img {
+    width: 80px;
+    height: 80px;
+    margin: 0 -5px; /* ลด margin ซ้ายขวาเป็น 5px */
+}
+
+.footer {
+    background-color: #2433a2; /* สีพื้นหลังสีม่วง */
+    padding: 5px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer-text p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Media query for mobile devices */ 
+@media (max-width: 600px) {
+     .section { flex: 1 1 100%; } 
+    }
