@@ -8,6 +8,6 @@ function setActive(element) {
 
 function delayRedirect(url, delay) {
         setTimeout(function() {
-            window.location.href = url;
+            window.location.href = filePath;
         }, delay);
     }
