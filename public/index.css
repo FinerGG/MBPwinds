@@ -85,6 +85,11 @@ body {
     display: block;
 }
 
+/* ซ่อนรูปภาพมือถือในหน้าจอใหญ่ */
+.header-image-mobile {
+    display: none;
+}
+
 /* ซ่อนรูปภาพเดสก์ท็อปและแสดงรูปภาพมือถือในหน้าจอมือถือ */
 @media (max-width: 768px) {    
     .header-image-desktop {
@@ -98,10 +103,6 @@ body {
     }
 }
 
-/* ซ่อนรูปภาพมือถือในหน้าจอใหญ่ */
-.header-image-mobile {
-    display: none;
-}
 
 .header h1 {
     position: relative;
