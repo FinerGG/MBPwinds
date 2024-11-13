@@ -115,16 +115,16 @@ body {
 }
 
 .section img {
-    max-width: 50%;
+    max-width: 70%;
     height: auto;
     margin-bottom: 0.5em;   /* เพิ่มระยะห่างระหว่างรูปและข้อความ */
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
     box-shadow: 0px 0px 15px;
 }
 
 .section img:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
 }
 
 .social-text{
