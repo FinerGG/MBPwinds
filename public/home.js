@@ -11,3 +11,18 @@ function delayRedirect(url, delay) {
             window.location.href = filePath;
         }, delay);
     }
+
+let previousScrollPosition = window.pageYOffset;
+const navbar = document.getElementById("navbar");
+
+window.onscroll = function() {
+  let currentScrollPosition = window.pageYOffset;
+  
+  // เปลี่ยนสีพื้นหลังของ navbar และสีของลิงก์ตามตำแหน่งการเลื่อน
+  if (currentScrollPosition === 0) {
+    navbar.classList.remove("scrolled"); // โปร่งใสเมื่ออยู่บนสุด
+  } else {
+    navbar.classList.add("scrolled"); // สีขาวเมื่อเลื่อนลง
+  }
+}
+
