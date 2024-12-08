@@ -1,6 +1,6 @@
 .fade-in {
     opacity: 0; /* เริ่มต้นด้วยความโปร่งแสง */
-    animation: fadeIn 1s ease-in forwards; /* ใช้แอนิเมชัน */
+    animation: fadeIn 1.9s ease-in forwards; /* ใช้แอนิเมชัน */
   }
 
       /* เอฟเฟกต์เลื่อนลง */
@@ -161,7 +161,7 @@
     cursor: pointer;
     flex-shrink: 0;
     width: 130px;
-    height: 00px;
+    height: 0%;
     display: flex;
     position: relative;
     margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างโลโก้และข้อความ */
@@ -172,7 +172,7 @@
     height: 120px;
     object-fit: cover;
     border-radius: 35%;
-    border: 4px solid rgb(41, 41, 152);
+    border: 4px solid rgb(65, 41, 152);
     box-shadow: 0px 0px 15px black;
     z-index: 4;
     margin-top: -40px;
@@ -180,43 +180,6 @@
   }
   .logo img:hover {
     transform: scale(1.05);
-  }
-
-  .logoH {
-    flex-shrink: 0;
-    width: 130px;
-    height: 130px;
-    display: flex;
-    position: relative;
-    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างโลโก้และข้อความ */
-  }
-  .logoH img {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 35%;
-    border: 4px solid rgb(41, 41, 152);
-    box-shadow: 0px 0px 15px black;
-    z-index: 4;
-    margin-top: -220px;
-    margin-left: -650px;
-    transition: transform 0.3s ease-in-out;
-  }
-  .logoH img:hover {
-    transform: scale(1.05);
-  }
-
-  .text {
-    color: white;
-    font-size: medium;
-    font-weight: bold;
-    width: 50px; /* ปรับขนาดตามต้องการ */
-    height: 20px;
-    cursor: pointer;
-    margin-left: 10px;
-    margin-top: -185px;
-    transition: color 0.3s ease;
   }
 
   .text:hover {
@@ -297,39 +260,37 @@
     flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
     margin-top: 0; /* ปรับตำแหน่ง */
     padding: 10px;
+    align-items: center;
+  }
+  .logo {
+    align-items: center;
+    margin-right: -20px;
   }
 
   .logo img {
+    align-items: center;
     width: 100px;
     height: 100px;
-    margin-top: -20px;
-  }
-
-  .logoH img {
-    width: 60px;
-    height: 60px;
-    margin-top: -50px;
-    margin-left: 0;
-  }
-
-  .text {
-    font-size: 12px; /* ลดขนาดข้อความ */
-    margin-top: -10px;
-    text-align: center;
+    margin-top: 400px;
   }
 
   .container {
     width: 100%; /* ขยาย container ให้เต็มหน้าจอ */
     margin-top: 10px;
-    line-height: 1.5;
+    margin: auto;
+    line-height: 4;
+    text-align: center;
   }
 
   .text-name h1 {
-    font-size: 20px; /* ลดขนาดหัวข้อ */
+    font-size: 16px; /* ลดขนาดหัวข้อ */
   }
 
   .description p {
-    font-size: 18px; /* ลดขนาดคำอธิบาย */
+    position: relative;
+    right: -43px;
+    top: 20px;
+    font-size: 14px; /* ลดขนาดคำอธิบาย */
     text-align: center;
   }
 
