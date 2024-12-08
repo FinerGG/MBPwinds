@@ -87,7 +87,7 @@
 
   body {
     background-color: darkblue;
-    animation: backgroundChange 20s infinite;
+    animation: backgroundChange 20s infinite alternate;
     background-size: cover; /* ปรับให้รูปภาพขยายเต็มหน้าจอ */
     background-position: center; /* จัดรูปภาพให้อยู่กึ่งกลาง */
     font-family: Arial, sans-serif;
