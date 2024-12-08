@@ -1,229 +1,278 @@
+/*font-family: Kanit, Arial; font-size: 13.999999999999998pt; font-weight: 400; vertical-align: baseline;*/
 .fade-in {
-    opacity: 0; /* เริ่มต้นด้วยความโปร่งแสง */
-    animation: fadeIn 1s ease-in forwards; /* ใช้แอนิเมชัน */
-  }
+  opacity: 0; /* เริ่มต้นด้วยความโปร่งแสง */
+  animation: fadeIn 1s ease-in forwards; /* ใช้แอนิเมชัน */
+}
 
-      /* เอฟเฟกต์เลื่อนลง */
-  .slide-down {
-    transform: translateY(-50px); /* เริ่มต้นเลื่อนขึ้น */
-    opacity: 0; /* เริ่มต้นโปร่งแสง */
-    animation: slideDown 2s ease-in-out forwards; /* ใช้แอนิเมชัน */
-  }
-  /* เอฟเฟกต์เลื่อนขึ้น */
-  .slide-up {
-    transform: translateY(50px); /* เริ่มต้นเลื่อนลง */
-    opacity: 0; /* เริ่มต้นโปร่งแสง */
-    animation: slideUp 2s ease-in-out forwards; /* ใช้แอนิเมชัน */
-  }
+    /* เอฟเฟกต์เลื่อนลง */
+.slide-down {
+  transform: translateY(-50px); /* เริ่มต้นเลื่อนขึ้น */
+  opacity: 0; /* เริ่มต้นโปร่งแสง */
+  animation: slideDown 2s ease-in-out forwards; /* ใช้แอนิเมชัน */
+}
+/* เอฟเฟกต์เลื่อนขึ้น */
+.slide-up {
+  transform: translateY(50px); /* เริ่มต้นเลื่อนลง */
+  opacity: 0; /* เริ่มต้นโปร่งแสง */
+  animation: slideUp 2s ease-in-out forwards; /* ใช้แอนิเมชัน */
+}
+/*เอฟเฟกค์เลื่อขวา*/
+.slide-right {
+  transform: translateX(-50px); /* เริ่มต้นเลื่อนขวา */
+  opacity: 0; /* เริ่มต้นโปร่งแสง */
+  animation: slideRight 2.4s ease-in-out forwards; /* ใช้แอนิเมชัน */
+}
+/* shaking-element*/
+.shaking-element {
+  transition: transform 0.4s ease-in-out;
+}
 
-  .shaking-element {
-    transition: transform 0.4s ease-in-out;
-  }
-  
-  .shaking-element:hover {
-    animation: shake 3s infinite; /* Infinite loop */
-    transform: scale(1.1);
-  }
+.shaking-element:hover {
+  animation: shake 3s infinite; /* Infinite loop */
+  transform: scale(1.1);
+}
 
 /*shake 0.5s;*/
 @keyframes shake {
-  0% { transform: translateY(0); }
-  25% { transform: translateY(-5px); }
-  50% { transform: translateY(10px); }
-  75% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+0% { transform: translateY(0); }
+25% { transform: translateY(-5px); }
+50% { transform: translateY(10px); }
+75% { transform: translateY(-5px); }
+100% { transform: translateY(0); }
 }
 
-  /* กำหนด keyframes สำหรับแอนิเมชัน */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0; /* เริ่มต้นที่โปร่งแสง */
-    }
-    100% {
-      opacity: 1; /* จบที่มองเห็นเต็ม */
-    }
+/* กำหนด keyframes สำหรับแอนิเมชัน */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* เริ่มต้นที่โปร่งแสง */
   }
+  100% {
+    opacity: 1; /* จบที่มองเห็นเต็ม */
+  }
+}
 
-  /* Keyframes สำหรับเลื่อนลง */
-  @keyframes slideDown {
+/* Keyframes สำหรับเลื่อนลง */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px); /* เลื่อนขึ้น */
+    opacity: 0; /* โปร่งแสง */
+  }
+  100% {
+    transform: translateY(0); /* ตำแหน่งปกติ */
+    opacity: 1; /* มองเห็นเต็ม */
+  }
+}
+/* Keyframes สำหรับเลื่อนขึ้น */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px); /* เลื่อนลง */
+    opacity: 0; /* โปร่งแสง */
+  }
+  100% {
+    transform: translateY(0); /* ตำแหน่งปกติ */
+    opacity: 1; /* มองเห็นเต็ม */
+  }
+}
+
+  /* Keyframes สำหรับเลื่อนขวา */
+  @keyframes slideRight {
     0% {
-      transform: translateY(-50px); /* เลื่อนขึ้น */
+      transform: translateX(-50px); /* เลื่อนขวา */
       opacity: 0; /* โปร่งแสง */
     }
     100% {
-      transform: translateY(0); /* ตำแหน่งปกติ */
-      opacity: 1; /* มองเห็นเต็ม */
-    }
-  }
-  /* Keyframes สำหรับเลื่อนขึ้น */
-  @keyframes slideUp {
-    0% {
-      transform: translateY(50px); /* เลื่อนลง */
-      opacity: 0; /* โปร่งแสง */
-    }
-    100% {
-      transform: translateY(0); /* ตำแหน่งปกติ */
+      transform: translateX(0); /* ตำแหน่งปกติ */
       opacity: 1; /* มองเห็นเต็ม */
     }
   }
 
-  body {
-    background-color: darkblue;
-    animation: backgroundChange 10s infinite alternate;
-    background-size: cover; /* ปรับให้รูปภาพขยายเต็มหน้าจอ */
-    background-position: center; /* จัดรูปภาพให้อยู่กึ่งกลาง */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    object-fit: cover;
-    justify-content: space-between;
-    height: 100vh;
-  }
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 14, 31, 0.9); /* สีดำโปร่งใส (ค่าความจางอยู่ที่ 0.5) */
-    z-index: -3; /* วางเลเยอร์ไว้ด้านหลังข้อความ */
-  }
+body {
+  background-color: darkblue;
+  animation: backgroundChange 20s infinite alternate;
+  background-size: cover; /* ปรับให้รูปภาพขยายเต็มหน้าจอ */
+  background-position: center; /* จัดรูปภาพให้อยู่กึ่งกลาง */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  object-fit: cover;
+  justify-content: space-between;
+  height: 100vh;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 14, 31, 0.9); /* สีดำโปร่งใส (ค่าความจางอยู่ที่ 0.5) */
+  z-index: -3; /* วางเลเยอร์ไว้ด้านหลังข้อความ */
+}
 
-  @keyframes backgroundChange {
-          0% {
-              background-image: url('images/bg.png');
-          }
-          50% {
-              background-image: url('images/bg2.png');
-          }
-          100% {
-              background-image: url('images/bg3.png');
-          }
-      }
-
-  .header {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
- z-index: 5;
-  }
-  .boxblack {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px; /* ระยะห่างระหว่างข้อความกับขอบ */
-    border-radius: 5px; /* ทำให้มุมกล่องโค้ง */
-    margin-top: -10px;
-  }
-  .header a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  .header a:hover {
-    color: #1595df;
-  }
-  .content {
-    display: flex;
-    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
-    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
-    min-height: 100vh; /* ให้สูงเต็มหน้าจอ */
-    padding: 20px;
-    gap: 30px; /* เพิ่มช่องว่างระหว่างโลโก้และข้อความ */
-    margin-top: -600px;
-  }
-  .logo {
-    flex-shrink: 0;
-    width: 130px;
-    height: 130px;
-    display: flex;
-    position: relative;
-    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างโลโก้และข้อความ */
-  }
-  .logo img {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 35%;
-    border: 4px solid rgb(41, 41, 152);
-    box-shadow: 0px 0px 15px black;
-    z-index: 4;
-    margin-top: -40px;
-    transition: transform 0.4s ease-in-out;
-  }
-  .logo img:hover {
-    transform: scale(1.05);
-  }
-
-  .container {
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 80%;
-      margin-top: -25px;
-      line-height: 5;
-  }
-
-  .text-name h1, .description p {
-    font-size: 2rem;
-    font-family: 'Arial', sans-serif;
-    margin: 0; /* ลบระยะห่างทั้งหมด */
-    padding: 0px;
-    opacity: 0; /* เริ่มต้นด้วยการซ่อน */
-    margin-top: -90px;
-  }
-  .text-name h1 {
-    font-size: 32px;
-    font-weight: bold;
-    color: rgb(209, 209, 209);
-    transition: color 0.3s ease;
-  }
-  .text-name :hover {
-      color: rgb(255, 255, 255);
-      filter: brightness(1);
-  }
-
-  .description p {
-      font-size: 24px;
-      font-weight: bold;
-      color: gray;
-      transition: color 0.3s ease;
-  }
-  .description :hover {
-      color: rgb(220, 220, 220);
-  }
-  .footer {
-    color: white;
-    text-align: center;
-    width: 100%;
-    padding: 30px 0;
-    margin-top: -700px;
-  }
-
-  @media (max-width: 768px) {
-    body {
-        flex-direction: column; /* จัดเรียงเป็นแนวตั้ง */
-        justify-content: flex-start; /* เริ่มต้นจากด้านบน */
+@keyframes backgroundChange {
+        0% {
+            background-image: url('images/bg.png');
+        }
+        20% {
+            background-image: url('images/bg2.png');
+        }
+        40% {
+            background-image: url('images/bg3.png');
+        }
+        60% {
+            background-image: url('images/bg4.png');
+        }
+        80% {
+            background-image: url('images/bg5.png');
+        }
+        100% {
+            background-image: url('images/bg6.png');
+        }
     }
-    .content {
-        flex-direction: column; /* จัดให้อยู่แนวตั้ง */
-        align-items: center;
-        padding: 10px;
-        gap: 10px; /* ลดช่องว่างระหว่างโลโก้และ container */
-    }
-    .logo {
-        margin-bottom: 10px; /* เพิ่มระยะห่าง */
-        transform: translateX(0); /* ตั้งตำแหน่งให้อยู่ตรงกลาง */
-    }
-    .container {
-        width: 100%; /* ลดขนาด container เพื่อให้อยู่ในขอบเขตหน้าจอ */
-        text-align: center; /* จัดข้อความให้อยู่กลาง */
-    }
+
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  z-index: 5;
+}
+.header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.header a:hover {
+  color: #1595df;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  min-height: 100vh; /* ให้สูงเต็มหน้าจอ */
+  padding: 20px;
+  gap: 30px; /* เพิ่มช่องว่างระหว่างโลโก้และข้อความ */
+  margin-top: -400px;
+}
+
+.logoM {
+  flex-shrink: 0;
+  width: 130px;
+  height: 0%;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างโลโก้และข้อความ */
+}
+.logoM img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 35%;
+  border: 4px solid rgb(41, 41, 152);
+  box-shadow: 0px 0px 15px black;
+  z-index: 4;
+  margin-top: -220px;
+  margin-left: -650px;
+  transition: transform 0.3s ease-in-out;
+}
+.logoM img:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  width: 50px; /* ปรับขนาดตามต้องการ */
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: -190px;
+  transition: color 0.3s ease;
+}
+
+.text:hover {
+  color: rgb(41, 41, 152);
+  text-shadow: 0px 0px 5px white;
+}
+
+.incontent {
+  text-align: center;
+}
+
+.footer {
+  color: white;
+  position: fixed; /* ให้ติดอยู่ที่ด้านล่างตลอด */
+  bottom: 0;       /* ชิดด้านล่างของหน้า */
+  left: 50%;       /* ชิดซ้าย 50% ของหน้าจอ */
+  transform: translateX(-50%); /* จัดให้อยู่ตรงกลางโดยเลื่อนกลับครึ่งหนึ่งของความกว้าง */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  width: 100%;    /* ทำให้ footer ครอบคลุมเต็มความกว้าง */
+  padding: 10px 0; /* เพิ่มระยะห่างด้านใน */
+  font-family: Arial, sans-serif; /* กำหนดฟอนต์ (ไม่จำเป็น) */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* เงาด้านบน (ไม่จำเป็น) */
+}
+
+/* สำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+body {
+  font-size: 12px; /* ปรับขนาดตัวอักษรให้เล็กลง */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+}
+
+.header {
+  flex-direction: column; /* เรียงหัวข้อแนวตั้ง */
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.content {
+  flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
+  margin-top: 0; /* ปรับตำแหน่ง */
+  padding: 10px;
+}
+
+.logoM img {
+  width: 60px;
+  height: 60px;
+  margin-top: -50px;
+  margin-left: 0;
+}
+
+.text {
+  font-size: 12px; /* ลดขนาดข้อความ */
+  margin-top: -10px;
+  text-align: center;
+}
+
+.footer {
+  font-size: 12px; /* ลดขนาด footer */
+  padding: 5px 0; /* ลดระยะห่างใน footer */
+}
+}
+
+
+/*เอฟเฟคกากๆ*/
+
+/* สไตล์สำหรับเอฟเฟกต์เฟด */
+.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+  z-index: 9999;
 }
