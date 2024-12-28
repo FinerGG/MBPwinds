@@ -3,7 +3,7 @@
 /*font-family: Kanit, Arial; font-size: 13.999999999999998pt; font-weight: 400; vertical-align: baseline;*/
 .fade-in {
   opacity: 0; /* เริ่มต้นด้วยความโปร่งแสง */
-  animation: fadeIn 1s ease-in forwards; /* ใช้แอนิเมชัน */
+  animation: fadeIn 2s ease-in forwards; /* ใช้แอนิเมชัน */
 }
 
     /* เอฟเฟกต์เลื่อนลง */
@@ -133,6 +133,8 @@ body {
     height: 600px;
     width: 1400px;
     flex-direction: column;
+    padding: 20px;
+    margin-bottom: 100px;
   }
   .H img{
     border-radius: 5px;
@@ -140,11 +142,16 @@ body {
     max-width: 60%;
     max-height: 60%;
     box-shadow: 0px 0px 15px black;
+    transition: transform 0.4s;
   }
+  .H img:hover{
+    transform: scale(1.05);
+  }
+  
   .H h1{
     color: white;
     font-family: "Mitr", serif;
-    font-weight: 500;
+    font-weight: 400;
   }
   .H p{
     color: white;
@@ -155,36 +162,81 @@ body {
   mark {
     color: rgb(62, 62, 159);
   }
-  section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    height: calc(100vh - 100px); /* ความสูงยืดหยุ่นลบพื้นที่ header และ footer */
-}
 
-.content-container {
-    display: flex;
-    gap: 20px; /* ระยะห่างระหว่างกล่อง */
-    flex-direction: row-reverse; /* สลับตำแหน่งให้ content อยู่ขวา */
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.content {
-  font-weight: bold;
-  font-size: 24px;
+.text h1{
   color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: color 0.3s ease-in-out;
+  text-decoration: underline;
 }
 
-.img {
-    width: 300px;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: gray;
+.text h1:hover{
+  color: #4d31eb;
 }
 
+.incontent {
+  margin-top: 60px; /* เพิ่มระยะห่างจากด้านบน */
+  padding: 30px;
+  display: flex; /* ใช้ Flexbox จัดวางแนวนอน */
+  align-items: flex-start; /* จัดข้อความให้อยู่ด้านบน */
+  gap: 20px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
+}
+
+.incontent img {
+  border-radius: 5px;
+  display: block;
+  max-width: 40%; /* กำหนดความกว้างสูงสุดเป็น 40% */
+  max-height: 40%; /* กำหนดความสูงสูงสุดเป็น 40% */
+  box-shadow: 0px 0px 15px black;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.incontent img:hover{
+  transform: scale(1.03);
+  filter: brightness(0.8);
+}
+
+.Brief {
+  margin-top: 0; /* กำหนดระยะห่างของข้อความ */
+  transition: filter 0.3s ease-in-out;
+}
+
+.Brief h1 {
+  color: white;
+  font-family: Mitr, serif;
+  font-weight: 400;
+  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  transition: filter 0.3s ease-in-out;
+}
+.Brief h2 {
+  color: white;
+  font-family: Mitr, serif;
+  font-weight: 400;
+  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin-top: 20px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.Brief p {
+  color: white;
+  font-family: Mitr, serif;
+  font-weight: 400;
+  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  transition: filter 0.3s ease-in-out;
+}
+
+.Brief span{
+  transition: filter 0.3s ease-in-out;
+}
+
+.Brief :hover{
+  filter: brightness(0.7);
+}
 
 .footer {
   color: white;
@@ -214,4 +266,12 @@ body {
   transition: opacity 1s ease-in-out;
   pointer-events: none;
   z-index: 9999;
+}
+/* เส้นกั้น */
+.divider {
+  width: 90%;
+  height: 3px;
+  background-color: #683be2;
+  margin: 30px auto;
+  border: none;
 }
