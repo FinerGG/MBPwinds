@@ -6,7 +6,7 @@
   animation: fadeIn 2s ease-in forwards; /* ใช้แอนิเมชัน */
 }
 
-    /* เอฟเฟกต์เลื่อนลง */
+/* เอฟเฟกต์เลื่อนลง */
 .slide-down {
   transform: translateY(-50px); /* เริ่มต้นเลื่อนขึ้น */
   opacity: 0; /* เริ่มต้นโปร่งแสง */
@@ -76,17 +76,17 @@
   }
 }
 
-  /* Keyframes สำหรับเลื่อนขวา */
-  @keyframes slideRight {
-    0% {
-      transform: translateX(-50px); /* เลื่อนขวา */
-      opacity: 0; /* โปร่งแสง */
-    }
-    100% {
-      transform: translateX(0); /* ตำแหน่งปกติ */
-      opacity: 1; /* มองเห็นเต็ม */
-    }
+/* Keyframes สำหรับเลื่อนขวา */
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50px); /* เลื่อนขวา */
+    opacity: 0; /* โปร่งแสง */
   }
+  100% {
+    transform: translateX(0); /* ตำแหน่งปกติ */
+    opacity: 1; /* มองเห็นเต็ม */
+  }
+}
 
 body {
   background-color: black;
@@ -112,56 +112,56 @@ body {
   margin-top: 30px;
   z-index: 5;
   position: fixed;
-  }
-  .header a {
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  .header a:hover {
-    color: #1595df;
-  }
-  .H {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 80px;
-    display: flex; /* ทำให้ container เป็น flexbox */
-    justify-content: center; /* จัดแนวนอนตรงกลาง */
-    align-items: center; /* จัดแนวตั้งตรงกลาง */
-    height: 600px;
-    width: 1400px;
-    flex-direction: column;
-    padding: 20px;
-    margin-bottom: 100px;
-  }
-  .H img{
-    border-radius: 5px;
-    display: block;
-    max-width: 60%;
-    max-height: 60%;
-    box-shadow: 0px 0px 15px black;
-    transition: transform 0.4s;
-  }
-  .H img:hover{
-    transform: scale(1.05);
-  }
-  
-  .H h1{
-    color: white;
-    font-family: "Mitr", serif;
-    font-weight: 400;
-  }
-  .H p{
-    color: white;
-    font-family: "Mitr", serif;
-    font-weight: 300;
-    text-align: center;
-  }
-  mark {
-    color: rgb(62, 62, 159);
-  }
+}
+.header a {
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.header a:hover {
+  color: #1595df;
+}
+.H {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  display: flex; /* ทำให้ container เป็น flexbox */
+  justify-content: center; /* จัดแนวนอนตรงกลาง */
+  align-items: center; /* จัดแนวตั้งตรงกลาง */
+  height: 600px;
+  width: 1400px;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+.H img{
+  border-radius: 5px;
+  display: block;
+  max-width: 60%;
+  max-height: 60%;
+  box-shadow: 0px 0px 15px black;
+  transition: transform 0.4s;
+}
+.H img:hover{
+  transform: scale(1.05);
+}
+
+.H h1{
+  color: white;
+  font-family: "Mitr", serif;
+  font-weight: 400;
+}
+.H p{
+  color: white;
+  font-family: "Mitr", serif;
+  font-weight: 300;
+  text-align: center;
+}
+mark {
+  color: rgb(62, 62, 159);
+}
 
 .text {
   display: flex;
@@ -193,7 +193,7 @@ body {
   max-width: 40%; /* กำหนดความกว้างสูงสุดเป็น 40% */
   max-height: 40%; /* กำหนดความสูงสูงสุดเป็น 40% */
   box-shadow: 0px 0px 15px black;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .incontent img:hover{
@@ -203,7 +203,6 @@ body {
 
 .Brief {
   margin-top: 0; /* กำหนดระยะห่างของข้อความ */
-  transition: filter 0.3s ease-in-out;
 }
 
 .Brief h1 {
@@ -211,7 +210,6 @@ body {
   font-family: Mitr, serif;
   font-weight: 400;
   margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
-  transition: filter 0.3s ease-in-out;
 }
 .Brief h2 {
   color: white;
@@ -219,7 +217,6 @@ body {
   font-weight: 400;
   margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
   margin-top: 20px;
-  transition: filter 0.3s ease-in-out;
 }
 
 .Brief p {
@@ -227,15 +224,55 @@ body {
   font-family: Mitr, serif;
   font-weight: 400;
   margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
-  transition: filter 0.3s ease-in-out;
 }
 
-.Brief span{
-  transition: filter 0.3s ease-in-out;
+.incontentR {
+  margin-top: 60px; /* เพิ่มระยะห่างจากด้านบน */
+  padding: 30px;
+  display: flex; /* ใช้ Flexbox จัดวางแนวนอน */
+  align-items: flex-start; /* จัดข้อความให้อยู่ด้านบน */
+  gap: 20px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
+  flex-direction: row-reverse; /* พลิกรูปแบบการจัดวาง */
 }
 
-.Brief :hover{
-  filter: brightness(0.7);
+.incontentR img {
+  border-radius: 5px;
+  display: block;
+  max-width: 40%; /* กำหนดความกว้างสูงสุดเป็น 40% */
+  max-height: 40%; /* กำหนดความสูงสูงสุดเป็น 40% */
+  box-shadow: 0px 0px 15px black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.incontentR img:hover {
+  transform: scale(1.03);
+  filter: brightness(0.8);
+}
+
+.BriefR {
+  margin-top: 0; /* กำหนดระยะห่างของข้อความ */
+}
+
+.BriefR h1 {
+  color: white;
+  font-family: Mitr, serif;
+  font-weight: 400;
+  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+}
+
+.BriefR h2 {
+  color: white;
+  font-family: Mitr, serif;
+  font-weight: 400;
+  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin-top: 20px;
+}
+
+.BriefR p {
+  color: white;
+  font-family: Mitr, serif;
+  font-weight: 400;
+  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
 }
 
 .footer {
@@ -249,8 +286,6 @@ body {
   padding: 10px 0; /* เพิ่มระยะห่างด้านใน */
   font-family: Arial, sans-serif; /* กำหนดฟอนต์ (ไม่จำเป็น) */
 }
-
-
 
 /*เอฟเฟคกากๆ*/
 
@@ -274,4 +309,39 @@ body {
   background-color: #683be2;
   margin: 30px auto;
   border: none;
+}
+
+@media (max-width: 768px) {
+  .H {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    margin-top: 0;
+    text-align: center; /* Center text */
+    padding: 0; /* Remove padding */
+  }
+
+  .H img {
+    width: 100%;
+    height: auto;
+  }
+
+  .incontent, .incontentR {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    padding: 0; /* Remove padding */
+  }
+
+  .incontent img, .incontentR img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .divider {
+    width: 100%;
+    height: 2px;
+    margin: 20px auto;
+  }
 }
