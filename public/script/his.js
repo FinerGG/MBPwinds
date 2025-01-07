@@ -31,4 +31,3 @@ document.addEventListener('DOMContentLoaded', () => {
     // รอ 2 วินาที ก่อนเริ่มพิมพ์ข้อความ
     setTimeout(typeText, 1500);
   });
-  
