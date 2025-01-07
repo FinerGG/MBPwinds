@@ -176,6 +176,30 @@ body::before {
   -webkit-text-fill-color: transparent;
   animation: color-run 5s infinite linear, bounce 2s infinite ease-in-out;
 }
+
+.social {
+  display: flex;
+  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  gap: 10px; /* ระยะห่างระหว่างไอคอน */
+  position: fixed; /* ติดตำแหน่งที่ด้านล่างของหน้า */
+  bottom: 20px; /* ระยะห่างจากด้านล่าง */
+  left: 0;
+  right: 0;
+}
+
+/* ปรับขนาดไอคอน */
+.social img {
+  width: 100px; /* ขนาดไอคอนเล็ก */
+  height: 100px; /* ขนาดไอคอนเล็ก */
+  cursor: pointer; /* เปลี่ยนเมาส์เป็นรูปมือเมื่อชี้ */
+  transition: transform 0.2s; /* เพิ่มเอฟเฟกต์เมื่อชี้ */
+}
+
+/* เพิ่มเอฟเฟกต์ขยายเมื่อชี้ */
+.social img:hover {
+  transform: scale(1.2); /* ขยายเล็กน้อยเมื่อชี้ */
+}
 /* การเคลื่อนไหวของสี */
 @keyframes color-run {
   0% {
@@ -213,12 +237,13 @@ body::before {
 /* สำหรับหน้าจอมือถือ */
 @media (max-width: 768px) {
 body {
-  font-size: 12px; /* ปรับขนาดตัวอักษรให้เล็กลง */
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
 }
-
+.header a {
+  font-size: large;
+}
 .cm {
   display: flex;
   justify-content: center;
