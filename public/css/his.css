@@ -154,6 +154,34 @@ body {
   font-weight: 400;
 }
 .H p{
+  width: 90%;
+  color: white;
+  font-family: "Mitr", serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.HE {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+  display: flex; /* ทำให้ container เป็น flexbox */
+  justify-content: center; /* จัดแนวนอนตรงกลาง */
+  align-items: center; /* จัดแนวตั้งตรงกลาง */
+  height: 200px;
+  width: 1400px;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 100px;
+}
+
+.HE h1{
+  color: white;
+  font-family: "Mitr", serif;
+  font-weight: 400;
+}
+.HE p{
+  width: 90%;
   color: white;
   font-family: "Mitr", serif;
   font-weight: 300;
@@ -312,12 +340,23 @@ mark {
 }
 
 @media (max-width: 768px) {
+  .header a {
+    font-size: large;
+  }
   .H {
     width: 100%;
     height: 100vh; /* Full viewport height */
     margin-top: 0;
     text-align: center; /* Center text */
     padding: 0; /* Remove padding */
+  }
+
+  .H p{
+    width: 88%;
+    color: white;
+    font-family: "Mitr", serif;
+    font-weight: 300;
+    text-align: center;
   }
 
   .H img {
@@ -330,7 +369,7 @@ mark {
     align-items: center;
     text-align: center; /* Center text */
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 85vh; /* Full viewport height */
     padding: 0; /* Remove padding */
   }
 
@@ -342,6 +381,6 @@ mark {
   .divider {
     width: 100%;
     height: 2px;
-    margin: 20px auto;
+    margin: 10px auto;
   }
 }
