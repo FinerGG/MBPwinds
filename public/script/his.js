@@ -52,4 +52,4 @@ function slideImages() {
   }
 }
 
-setInterval(slideImages, 5000);
+setInterval(slideImages, 4000);
