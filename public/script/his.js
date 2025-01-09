@@ -1,33 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const textElement = document.querySelector('.text-name h1');
-    const descriptionElement = document.querySelector('.description p');
-    const text = 'MATTHAYOM BANBANGKAPI';
-    const description = 'WINDS SYMPHONY';
-    let index = 0;
-    let descIndex = 0;
-  
-    // ฟังก์ชันพิมพ์ข้อความ
-    function typeText() {
-      if (index < text.length) {
-        textElement.textContent += text.charAt(index); // เพิ่มตัวอักษรทีละตัว
-        textElement.style.opacity = 1; // แสดงข้อความ
-        index++;
-        setTimeout(typeText, 100); // เพิ่มความล่าช้า
-      } else {
-        setTimeout(typeDescription, 500); // เว้นช่วงก่อนแสดง description
-      }
-    }
-  
-    // ฟังก์ชันพิมพ์ข้อความสำหรับ description
-    function typeDescription() {
-      if (descIndex < description.length) {
-        descriptionElement.textContent += description.charAt(descIndex);
-        descriptionElement.style.opacity = 1;
-        descIndex++;
-        setTimeout(typeDescription, 100);
-      }
-    }
-  
-    // รอ 2 วินาที ก่อนเริ่มพิมพ์ข้อความ
-    setTimeout(typeText, 1500);
-  });
+function makeScreenWhite(event) {
+  event.preventDefault();
+  document.body.style.backgroundColor = "white";
+  document.body.innerHTML = "";
+
+  setTimeout(() => {
+      window.location.href = event.target.href;
+  }, 500);
+}
+
+function fadeToBlack(event) {
+event.preventDefault();
+
+const fadeOverlay = document.createElement("div");
+fadeOverlay.className = "fade";
+document.body.appendChild(fadeOverlay);
+
+setTimeout(() => {
+    fadeOverlay.style.opacity = "1";
+}, 10);
+
+setTimeout(() => {
+    window.location.href = event.target.href;
+}, 1000);
+}
+
+// สไลด์รูป
+const slider = document.getElementById("slider");
+const images = document.querySelectorAll(".slideshow-wrapper img");
+const totalImages = images.length;
+let currentIndex = 0;
+
+const firstImageClone = images[0].cloneNode(true);
+slider.appendChild(firstImageClone);
+
+function slideImages() {
+  currentIndex++;
+
+  const offset = currentIndex * -65;
+  slider.style.transform = `translateX(${offset}%)`;
+
+  if (currentIndex === totalImages) {
+    setTimeout(() => {
+      slider.style.transition = "none";
+      slider.style.transform = `translateX(0%)`;
+      currentIndex = 0;
+
+      setTimeout(() => {
+        slider.style.transition = "transform 1s ease-in-out";
+      }, 10);
+    }, 1000);
+  }
+}
+
+setInterval(slideImages, 2000);
