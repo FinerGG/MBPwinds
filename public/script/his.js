@@ -46,10 +46,10 @@ function slideImages() {
       currentIndex = 0;
 
       setTimeout(() => {
-        slider.style.transition = "transform 1s ease-in-out";
+        slider.style.transition = "transform 1.3s ease-in-out";
       }, 10);
-    }, 1000);
+    }, 1300);
   }
 }
 
-setInterval(slideImages, 3500);
+setInterval(slideImages, 4000);
