@@ -180,7 +180,7 @@ body {
 .slideshow-wrapper {
   display: flex;
   width: 160%; /* ขยายให้พอดีกับจำนวนภาพ */
-  transition: transform 1s ease-in-out; /* เอฟเฟกต์การเลื่อน */
+  transition: transform 1.3s ease-in-out; /* เอฟเฟกต์การเลื่อน */
 }
 
 .slideshow-wrapper img {
