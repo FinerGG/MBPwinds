@@ -438,4 +438,8 @@ mark {
     height: 2px;
     margin: 10px auto;
   }
+  .footer {
+    font-size: 12px; /* ลดขนาด footer */
+    padding: 5px 0; /* ลดระยะห่างใน footer */
+  }
 }
