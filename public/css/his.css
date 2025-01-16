@@ -1,90 +1,84 @@
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
 
-/*font-family: Kanit, Arial; font-size: 13.999999999999998pt; font-weight: 400; vertical-align: baseline;*/
 .fade-in {
-  opacity: 0; /* เริ่มต้นด้วยความโปร่งแสง */
-  animation: fadeIn 2s ease-in forwards; /* ใช้แอนิเมชัน */
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
 }
 
-/* เอฟเฟกต์เลื่อนลง */
 .slide-down {
-  transform: translateY(-50px); /* เริ่มต้นเลื่อนขึ้น */
-  opacity: 0; /* เริ่มต้นโปร่งแสง */
-  animation: slideDown 2s ease-in-out forwards; /* ใช้แอนิเมชัน */
+  transform: translateY(-50px);
+  opacity: 0;
+  animation: slideDown 2s ease-in-out forwards;
 }
-/* เอฟเฟกต์เลื่อนขึ้น */
+
 .slide-up {
-  transform: translateY(50px); /* เริ่มต้นเลื่อนลง */
-  opacity: 0; /* เริ่มต้นโปร่งแสง */
-  animation: slideUp 2s ease-in-out forwards; /* ใช้แอนิเมชัน */
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 2s ease-in-out forwards;
 }
-/*เอฟเฟกค์เลื่อขวา*/
+
 .slide-right {
-  transform: translateX(-50px); /* เริ่มต้นเลื่อนขวา */
-  opacity: 0; /* เริ่มต้นโปร่งแสง */
-  animation: slideRight 2.4s ease-in-out forwards; /* ใช้แอนิเมชัน */
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: slideRight 2.4s ease-in-out forwards;
 }
-/* shaking-element*/
+
 .shaking-element {
   transition: transform 0.4s ease-in-out;
 }
 
 .shaking-element:hover {
-  animation: shake 3s infinite; /* Infinite loop */
+  animation: shake 3s infinite;
   transform: scale(1.1);
 }
 
-/*shake 0.5s;*/
 @keyframes shake {
-0% { transform: translateY(0); }
-25% { transform: translateY(-5px); }
-50% { transform: translateY(10px); }
-75% { transform: translateY(-5px); }
-100% { transform: translateY(0); }
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(10px); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
 }
 
-/* กำหนด keyframes สำหรับแอนิเมชัน */
 @keyframes fadeIn {
   0% {
-    opacity: 0; /* เริ่มต้นที่โปร่งแสง */
+    opacity: 0;
   }
   100% {
-    opacity: 1; /* จบที่มองเห็นเต็ม */
+    opacity: 1;
   }
 }
 
-/* Keyframes สำหรับเลื่อนลง */
 @keyframes slideDown {
   0% {
-    transform: translateY(-50px); /* เลื่อนขึ้น */
-    opacity: 0; /* โปร่งแสง */
+    transform: translateY(-50px);
+    opacity: 0;
   }
   100% {
-    transform: translateY(0); /* ตำแหน่งปกติ */
-    opacity: 1; /* มองเห็นเต็ม */
-  }
-}
-/* Keyframes สำหรับเลื่อนขึ้น */
-@keyframes slideUp {
-  0% {
-    transform: translateY(50px); /* เลื่อนลง */
-    opacity: 0; /* โปร่งแสง */
-  }
-  100% {
-    transform: translateY(0); /* ตำแหน่งปกติ */
-    opacity: 1; /* มองเห็นเต็ม */
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-/* Keyframes สำหรับเลื่อนขวา */
-@keyframes slideRight {
+@keyframes slideUp {
   0% {
-    transform: translateX(-50px); /* เลื่อนขวา */
-    opacity: 0; /* โปร่งแสง */
+    transform: translateY(50px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* ตำแหน่งปกติ */
-    opacity: 1; /* มองเห็นเต็ม */
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -92,13 +86,13 @@ body {
   background-color: black;
 }
 .video-background {
-  position: fixed; /* ทำให้พื้นหลังคงที่ */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ให้วิดีโอเติมเต็มพื้นที่ */
-  z-index: -1; /* เลื่อนพื้นหลังให้อยู่หลังเนื้อหา */
+  object-fit: cover;
+  z-index: -1;
   opacity: 0.2;
 }
 
@@ -169,9 +163,9 @@ body {
 
 .slideshow-container {
   width: 100%;
-  max-width: 650px; /* ขนาดสูงสุด */
-  aspect-ratio: 4 / 3; /* อัตราส่วน 4:3 */
-  overflow: hidden; /* ซ่อนภาพที่ออกนอกกรอบ */
+  max-width: 650px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   margin: 0 auto;
   position: relative;
   border-radius: 6px;
@@ -179,14 +173,14 @@ body {
 
 .slideshow-wrapper {
   display: flex;
-  width: 160%; /* ขยายให้พอดีกับจำนวนภาพ */
-  transition: transform 1.3s ease-in-out; /* เอฟเฟกต์การเลื่อน */
+  width: 160%;
+  transition: transform 1.3s ease-in-out;
 }
 
 .slideshow-wrapper img {
   width: 90%;
-  flex-shrink: 0; /* ไม่ให้ย่อขนาด */
-  object-fit: cover; /* ครอบภาพให้พอดี */
+  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .HE {
@@ -240,18 +234,18 @@ mark {
 }
 
 .incontent {
-  margin-top: 60px; /* เพิ่มระยะห่างจากด้านบน */
+  margin-top: 60px;
   padding: 30px;
-  display: flex; /* ใช้ Flexbox จัดวางแนวนอน */
-  align-items: flex-start; /* จัดข้อความให้อยู่ด้านบน */
-  gap: 20px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .incontent img {
   border-radius: 5px;
   display: block;
-  max-width: 40%; /* กำหนดความกว้างสูงสุดเป็น 40% */
-  max-height: 40%; /* กำหนดความสูงสูงสุดเป็น 40% */
+  max-width: 40%;
+  max-height: 40%;
   box-shadow: 0px 0px 15px black;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
@@ -262,20 +256,20 @@ mark {
 }
 
 .Brief {
-  margin-top: 0; /* กำหนดระยะห่างของข้อความ */
+  margin-top: 0;
 }
 
 .Brief h1 {
   color: white;
   font-family: Mitr, serif;
   font-weight: 400;
-  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin: 0;
 }
 .Brief h2 {
   color: white;
   font-family: Mitr, serif;
   font-weight: 400;
-  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin: 0;
   margin-top: 20px;
 }
 
@@ -283,23 +277,23 @@ mark {
   color: white;
   font-family: Mitr, serif;
   font-weight: 400;
-  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin: 0;
 }
 
 .incontentR {
-  margin-top: 60px; /* เพิ่มระยะห่างจากด้านบน */
+  margin-top: 60px;
   padding: 30px;
-  display: flex; /* ใช้ Flexbox จัดวางแนวนอน */
-  align-items: flex-start; /* จัดข้อความให้อยู่ด้านบน */
-  gap: 20px; /* ระยะห่างระหว่างรูปภาพและข้อความ */
-  flex-direction: row-reverse; /* พลิกรูปแบบการจัดวาง */
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-direction: row-reverse;
 }
 
 .incontentR img {
   border-radius: 5px;
   display: block;
-  max-width: 40%; /* กำหนดความกว้างสูงสุดเป็น 40% */
-  max-height: 40%; /* กำหนดความสูงสูงสุดเป็น 40% */
+  max-width: 40%;
+  max-height: 40%;
   box-shadow: 0px 0px 15px black;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
@@ -310,21 +304,21 @@ mark {
 }
 
 .BriefR {
-  margin-top: 0; /* กำหนดระยะห่างของข้อความ */
+  margin-top: 0;
 }
 
 .BriefR h1 {
   color: white;
   font-family: Mitr, serif;
   font-weight: 400;
-  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin: 0;
 }
 
 .BriefR h2 {
   color: white;
   font-family: Mitr, serif;
   font-weight: 400;
-  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin: 0;
   margin-top: 20px;
 }
 
@@ -332,24 +326,22 @@ mark {
   color: white;
   font-family: Mitr, serif;
   font-weight: 400;
-  margin: 0; /* ลบระยะห่างเริ่มต้นของข้อความ */
+  margin: 0;
 }
 
 .footer {
   color: white;
-  position: fixed; /* ให้ติดอยู่ที่ด้านล่างตลอด */
-  bottom: 0;       /* ชิดด้านล่างของหน้า */
-  left: 50%;       /* ชิดซ้าย 50% ของหน้าจอ */
-  transform: translateX(-50%); /* จัดให้อยู่ตรงกลางโดยเลื่อนกลับครึ่งหนึ่งของความกว้าง */
-  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-  width: 100%;    /* ทำให้ footer ครอบคลุมเต็มความกว้าง */
-  padding: 10px 0; /* เพิ่มระยะห่างด้านใน */
-  font-family: Arial, sans-serif; /* กำหนดฟอนต์ (ไม่จำเป็น) */
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
 }
 
-/*เอฟเฟคกากๆ*/
-
-/* สไตล์สำหรับเอฟเฟกต์เฟด */
+/*เอฟเฟคคคคค*/
 .fade {
   position: fixed;
   top: 0;
@@ -362,7 +354,9 @@ mark {
   pointer-events: none;
   z-index: 9999;
 }
-/* เส้นกั้น */
+/*เอฟเฟคคคคค จบ*/
+
+/*เส้นกันไม่ให้เขารักกัน*/
 .divider {
   width: 90%;
   height: 3px;
@@ -371,8 +365,7 @@ mark {
   border: none;
 }
 
-/*เอฟเฟคกากๆ end*/
-
+/*มือถือ*/
 @media (max-width: 768px) {
   .header a {
     font-size: large;
@@ -422,10 +415,10 @@ mark {
   .incontent, .incontentR {
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text */
+    text-align: center;
     width: 100%;
-    height: 85vh; /* Full viewport height */
-    padding: 0; /* Remove padding */
+    height: 85vh;
+    padding: 0;
   }
 
   .incontent img, .incontentR img {
@@ -439,7 +432,7 @@ mark {
     margin: 10px auto;
   }
   .footer {
-    font-size: 12px; /* ลดขนาด footer */
-    padding: 5px 0; /* ลดระยะห่างใน footer */
+    font-size: 12px;
+    padding: 5px 0;
   }
 }
