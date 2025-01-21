@@ -133,7 +133,6 @@ body {
   flex-direction: column;
   padding: 20px;
   margin-bottom: 100px;
-  border: solid 1px red;
 }
 .H img{
   justify-content: center;
@@ -196,7 +195,6 @@ body {
   flex-direction: column;
   padding: 20px;
   margin-bottom: 100px;
-  border: solid 1px red;
 }
 
 .HE h1{
@@ -380,7 +378,6 @@ mark {
   .H h1 {
     height: 10vh;
     width: 46vh;
-    border: solid 1px red;
   }
 
   .H p{
