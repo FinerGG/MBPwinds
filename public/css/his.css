@@ -521,6 +521,11 @@ mark {
     max-width: 80%;
     max-height: 80%;
   }
+  .incontentP h3 {
+    border: solid 1px red;
+    width: 130%;
+    font-size: 16px;
+  }
   .incontentP img {
     width: 100%;
     height: auto;
@@ -536,7 +541,7 @@ mark {
     margin: 10px auto;
   }
   .dividerW {
-    width: 80%;
+    width: 85%;
     height: 1px;
     margin: 5px auto;
   }
