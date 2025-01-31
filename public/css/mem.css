@@ -241,8 +241,12 @@ body {
   padding: 0;
   overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
 }
+.header {
+  width: 100%;
+}
 .header a {
-  font-size: large;
+  font-size: 14px;
+  justify-content: space-evenly;
 }
 .cm {
   display: flex;
