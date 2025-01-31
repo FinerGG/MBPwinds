@@ -252,8 +252,13 @@
     overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
     font-family: Arial, sans-serif;
   }
+  .header {
+    width: 100%;
+    display: flex;
+}
   .header a {
-    font-size: large;
+    font-size: 14px;
+    justify-content: space-evenly;
   }
   .content {
     height: 40%;
