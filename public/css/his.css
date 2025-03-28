@@ -6,7 +6,6 @@
   animation: fadeIn 2s ease-in forwards;
 }
 
-
 .slide-down {
   transform: translateY(-50px);
   opacity: 0;
