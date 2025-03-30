@@ -159,9 +159,11 @@ body::before {
         .content {
           transition: filter 0.3s ease-in-out;
           padding: 20px;
+          z-index: 999;
       }
       .blur {
         filter: blur(5px); /* เบลอพื้นหลัง */
+        
       }
 
       /* ---- Prevent Scrolling ---- */
@@ -190,12 +192,12 @@ body::before {
 }
 
 .social {
+  position: relative;
+  top: 250px;
   display: flex;
   justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
-  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+  align-items: end;
   gap: 10px; /* ระยะห่างระหว่างไอคอน */
-  position: fixed; /* ติดตำแหน่งที่ด้านล่างของหน้า */
-  bottom: 20px; /* ระยะห่างจากด้านล่าง */
   left: 0;
   right: 0;
 }
@@ -267,7 +269,7 @@ body {
   position: absolute;
   left: 20px;
   top: -20px;
-  z-index: 1001;
+  z-index: 5000;
 }
 .desktop-menu {
   display: none;
@@ -284,6 +286,7 @@ body {
   text-align: center;
   padding: 10px 0;
   gap: 120px; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
+  z-index: 5000;
 }
 .mobile-menu.active {
   display: flex;
