@@ -15,12 +15,21 @@
     Your browser does not support the video tag.
 </video>
 
-    <div class="header slide-down">
+<header class="header fade-in">
+  <button class="menu-button" onclick="toggleMenu()">☰</button>
+  <nav class="desktop-menu">
       <a href="index.html" onclick="fadeToBlack(event)">HOME</a>
-      <a href="mem.html" onclick="fadeToBlack(event)">MEMBERS</a>
       <a href="his.html" onclick="fadeToBlack(event)">HISTORY</a>
+      <a href="mem.html" onclick="fadeToBlack(event)">MEMBERS</a>
       <a href="per.html" onclick="fadeToBlack(event)">PERFORMANCE</a>
-    </div>
+  </nav>
+  <nav class="mobile-menu">
+      <a href="index.html" onclick="toggleMenu()" onclick="fadeToBlack(event)">HOME</a>
+      <a href="his.html" onclick="toggleMenu()" onclick="fadeToBlack(event)">HISTORY</a>
+      <a href="mem.html" onclick="toggleMenu()" onclick="fadeToBlack(event)">MEMBERS</a>
+      <a href="per.html" onclick="toggleMenu()" onclick="fadeToBlack(event)">PERFORMANCE</a>
+  </nav>
+</header>
 
 
           <div class="text fade-in" style="margin-top: 100px;">
