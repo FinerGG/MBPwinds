@@ -124,7 +124,7 @@ body {
   color: #1595df;
 }
         /* ---- Content Blur Effect ---- */
-        .content {
+      .content {
           transition: filter 0.3s ease-in-out;
           padding: 20px;
       }
