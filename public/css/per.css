@@ -123,6 +123,19 @@ body {
 .header a:hover {
   color: #1595df;
 }
+        /* ---- Content Blur Effect ---- */
+        .content {
+          transition: filter 0.3s ease-in-out;
+          padding: 20px;
+      }
+      .blur {
+        filter: blur(5px); /* เบลอพื้นหลัง */
+      }
+
+      /* ---- Prevent Scrolling ---- */
+      .no-scroll {
+          overflow: hidden;
+      }
 .slideshow-container {
   width: 100%;
   max-width: 650px;
@@ -341,13 +354,51 @@ mark {
   max-width: 1400px;
 }
 @media (max-width: 768px) {
-.header {
-    width: 100%;
+  .header {
+    justify-content: flex-start;
+    padding: 10px;
 }
-  .header a {
-    font-size: 16px;
-    justify-content: space-evenly;
-  }
+.menu-button {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    z-index: 1001;
+}
+.desktop-menu {
+    display: none;
+}
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 95%;
+    height: 700px;
+    text-align: center;
+    padding: 10px 0;
+    gap: 120px; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
+}
+.mobile-menu.active {
+    display: flex;
+}
+.mobile-menu a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
+    -webkit-text-stroke: 0.5px black; /* ขอบสีดำ */
+    text-stroke: 0.5px black;
+    text-shadow: 0px 0px 5px black; /* เงาสีดำ */
+}
   .ttimg {
     width: 90%;
     height: auto;
@@ -414,5 +465,19 @@ mark {
   .footer {
     font-size: 12px;
     padding: 5px 0;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .menu-button, .close-button {
+    display: none;
+  }
+  .desktop-menu {
+    display: flex;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างลิงก์ในเดสก์ท็อป */
+  }
+  .mobile-menu {
+    display: none;
   }
 }
