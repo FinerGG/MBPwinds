@@ -193,7 +193,7 @@ body::before {
 
 .social {
   position: relative;
-  top: 250px;
+  top: 200px;
   display: flex;
   justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
   align-items: end;
@@ -309,6 +309,9 @@ body {
   height: 100px;
   color: white;
   font-size: 5rem;
+}
+.social {
+  top: 250px;
 }
 
 .content {
