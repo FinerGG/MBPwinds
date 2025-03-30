@@ -27,3 +27,12 @@ setTimeout(() => {
     window.location.href = event.target.href; // นำทางไปยัง href
 }, 1000); // เวลาเดียวกับ transition (1 วินาที)
 }
+
+function toggleMenu() {
+    const menu = document.querySelector('.mobile-menu');
+    const content = document.querySelector('.content');
+    const body = document.querySelector('body');
+    menu.classList.toggle('active');
+    content.classList.toggle('blur');
+    body.classList.toggle('no-scroll');
+  }
