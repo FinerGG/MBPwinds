@@ -500,17 +500,18 @@ mark {
     display: none;
 }
 .mobile-menu {
-    display: none;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 95%;
-    height: 700px;
-    text-align: center;
-    padding: 10px 0;
-    gap: 120px; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 95%;
+  height: 700px;
+  text-align: center;
+  padding: 10px 0;
+  gap: 12%; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
+  z-index: 5000;
 }
 .mobile-menu.active {
     display: flex;
