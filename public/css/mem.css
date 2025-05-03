@@ -285,7 +285,7 @@ body {
   height: 700px;
   text-align: center;
   padding: 10px 0;
-  gap: 120px; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
+  gap: 12%; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
   z-index: 5000;
 }
 .mobile-menu.active {
