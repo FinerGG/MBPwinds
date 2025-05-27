@@ -244,23 +244,22 @@
   }
   .footer {
     color: white;
-    position: fixed; /* ให้ติดอยู่ที่ด้านล่างตลอด */
-    bottom: 0;       /* ชิดด้านล่างของหน้า */
-    left: 50%;       /* ชิดซ้าย 50% ของหน้าจอ */
-    transform: translateX(-50%); /* จัดให้อยู่ตรงกลางโดยเลื่อนกลับครึ่งหนึ่งของความกว้าง */
-    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
-    width: 100%;    /* ทำให้ footer ครอบคลุมเต็มความกว้าง */
-    padding: 10px 0; /* เพิ่มระยะห่างด้านใน */
-    font-family: Arial, sans-serif; /* กำหนดฟอนต์ (ไม่จำเป็น) */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* เงาด้านบน (ไม่จำเป็น) */;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* สำหรับหน้าจอมือถือ */
 @media (max-width: 768px) {
   body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
   }
   
@@ -294,7 +293,7 @@
   height: 700px;
   text-align: center;
   padding: 10px 0;
-  gap: 12%; /* เพิ่มระยะห่างระหว่างลิงก์ในมือถือ */
+  gap: 12%;
   z-index: 5000;
 }
 .mobile-menu.active {
@@ -305,14 +304,14 @@
     color: white;
     text-decoration: none;
     padding: 10px;
-    margin: 5px 0; /* เพิ่มระยะห่างระหว่างลิงก์ */
-    -webkit-text-stroke: 0.5px black; /* ขอบสีดำ */
+    margin: 5px 0;
+    -webkit-text-stroke: 0.5px black;
     text-stroke: 0.5px black;
-    text-shadow: 0px 0px 5px black; /* เงาสีดำ */
+    text-shadow: 0px 0px 5px black;
 }
   .content {
     height: 40%;
-    flex-direction: column; /* จัดเรียงเนื้อหาในแนวตั้ง */
+    flex-direction: column;
     padding: 10px;
     align-items: center;
     justify-content: center;
