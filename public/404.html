@@ -6,23 +6,79 @@
     <title>Page Not Found</title>
     <link rel="shortcut icon" href="css/images/mbppp.ico" type="image/x-icon">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px 16px; border-radius: 3px; }
-      #message h3 { color: #888; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
-      #message h2 { color: #412998; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+    <style>
+      body {
+        background: #0a001f;
+        color: rgb(162, 162, 162);
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .bubbles {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .bubble {
+        position: absolute;
+        bottom: -100px;
+        border-radius: 50%;
+        opacity: 0.3;
+        background: linear-gradient(135deg, #7e5bff 60%, #039be5 100%);
+        animation: float 10s linear infinite;
+      }
+      .bubble:nth-child(1) { left: 10%; width: 60px; height: 60px; animation-duration: 12s; }
+      .bubble:nth-child(2) { left: 25%; width: 40px; height: 40px; animation-duration: 8s; }
+      .bubble:nth-child(3) { left: 40%; width: 80px; height: 80px; animation-duration: 14s; }
+      .bubble:nth-child(4) { left: 60%; width: 50px; height: 50px; animation-duration: 10s; }
+      .bubble:nth-child(5) { left: 75%; width: 70px; height: 70px; animation-duration: 16s; }
+      .bubble:nth-child(6) { left: 85%; width: 30px; height: 30px; animation-duration: 7s; }
+
+      @keyframes float {
+        0% { transform: translateY(0) scale(1); opacity: 0.3; }
+        50% { opacity: 0.5; }
+        100% { transform: translateY(-110vh) scale(1.2); opacity: 0; }
+      }
+
+      #message {
+        background: rgba(31, 0, 126, 0.438);
+        max-width: 360px;
+        padding: 32px 24px 16px;
+        border-radius: 3px;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        box-sizing: border-box;
+      }
+      #message h3 { color: #ffffff; font-weight: normal; font-size: 16px; margin: 16px 0 12px; }
+      #message h2 { color: #7e5bff; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgb(255, 255, 255); margin: 0 0 16px;}
       #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
       #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #message, #message a { box-shadow: 0 1px 3px rgb(0, 0, 0), 0 1px 2px rgb(255, 255, 255); }
       #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
       @media (max-width: 768px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #4129C8; }
+        #message {width: 420px; height: auto; margin-top: 0; background: #00000069; box-shadow: none; text-align: center;}
+        body { border-top: 16px solid #0a001f; }
+        #message h2 { font-size: 32px; }
       }
     </style>
   </head>
   <body>
+    <div class="bubbles">
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+      <div class="bubble"></div>
+    </div>
     <div id="message">
       <h2>404</h2>
       <h1>Page Not Found</h1>
